@@ -1,13 +1,30 @@
 .tix_tickets_table {
   text-align: left;
+  font-size: 14px;
   thead {
     background-color: #fafafa ;
-    font-weight: 600;
-    th {
-      padding: 10px 20px;
-    }
+  }
+  th {
+    font-weight: 600;    
+    padding: 10px 20px;
   }
   td {
     padding: 10px 20px;
+  }
+}
+.tix-attendee-form {
+  input, select {
+    border: none;
+    border-radius: 3px;
+    padding: 4px 10px;
+    line-height: 1.7;
+    font-size: 16px;
+    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.2);
+    background: #fafafa;
+    height: 35px;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 500;
   }
 }
