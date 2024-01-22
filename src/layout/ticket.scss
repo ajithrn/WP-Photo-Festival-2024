@@ -1,14 +1,21 @@
 #tix {
   padding: 30px;
+  @media (max-width: 599px) {
+    padding: 30px 10px;
+  }
   padding-bottom: 90px;
   background-color: #fafafa;
   border-radius: 3px;
   .tix_tickets_table {
+    overflow-x: scroll;
     text-align: left;
     font-size: 14px;
     .tix-ticket-title {
       color: #e9555c;
       line-height: 3;
+      @media (max-width: 599px) {
+      line-height: 1.2;
+      }
     }
     thead {
       background-color: #D7F1BE;
@@ -17,9 +24,16 @@
       font-size: 18px;
       font-weight: 600;
       padding: 10px 20px;
+      @media (max-width: 599px) {
+        font-size: 14px;
+        padding: 5px 10px;
+      }
     }
     td {
       padding: 10px 20px;
+      @media (max-width: 599px) {
+        padding: 5px 10px;
+      }
     }
   }
   .tix-attendee-form {
@@ -40,9 +54,13 @@
       box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.2);
       background: #f2f2f2;
       height: 32px;
+      @media (max-width: 599px) {
+        width: 90%;
+      }
     }
     input[type="radio"], input[type="checkbox"] {
       height: auto;
+      width: auto;
       margin-right: 6px;
     }
     label {

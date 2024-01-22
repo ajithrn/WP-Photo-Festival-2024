@@ -7,12 +7,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 40px;
-    row-gap: 50px;
+    padding-bottom: 40px;
     .wp-block-post {
-      flex-basis: calc(50% - 30px); // Two divs per row on larger screens
+      flex-basis: 100%; // One div per row on mobile devices
 
-      @media screen and (max-width: 768px) {
-        flex-basis: 100%; // One div per row on mobile devices
+      @include device-size(tablet-portrait) {
+        flex-basis: calc(50% - 30px)!important;  // Two divs per row on larger screens
         margin-right: 0;
       }
       .wp-block-post-featured-image {
@@ -24,6 +24,11 @@
         }
       }
     }
+    .wp-block-template-part {
+      .wp-block-group {
+        padding-top: 0 !important;
+      }
+    }
   }
 }
 
@@ -32,12 +37,22 @@
   .wp-block-post-template {
     justify-content: start;
     .wp-block-post { 
-      flex-basis: calc(33% - 30px)!important; // Two divs per row on larger screens
-  
-        @media screen and (max-width: 768px) {
-          flex-basis: 100%; // One div per row on mobile devices
-          margin-right: 0;
-        }
+      flex-basis: 100%; // One div per row on mobile devices
+
+      @include device-size(tablet-portrait) {
+        flex-basis: calc(50% - 30px)!important;  // Two divs per row on larger screens
+        margin-right: 0;
+      }
+
+      @include device-size(desktop) {
+        flex-basis: calc(33% - 30px)!important;  // Two divs per row on larger screens
+        margin-right: 0;
+      }
+    }
+    .wp-block-template-part {
+      .wp-block-group {
+        padding-top: 0 !important;
+      }
     }
   }
 }
@@ -48,7 +63,9 @@
 .organizer-list {
   li {
     box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.2);
-    flex-basis: calc(50% - 40px)!important;
+    @include device-size(tablet-portrait) {
+      flex-basis: calc(50% - 40px)!important;
+    }
   }
   .wp-social-link {
     flex-basis: 36px!important;
@@ -57,4 +74,14 @@
 
 .profile-social-links {
   flex-basis: 36px!important;
+}
+
+/**
+* Page content 
+*/
+.page-content {
+  @media (max-width: 599px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

@@ -35,3 +35,15 @@
     text-transform: uppercase;
   }
 }
+
+/**
+* Subscriber form
+*/
+.wp-block-jetpack-subscriptions__form-elements {
+  @media (max-width: 599px) {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+}
