@@ -1,30 +1,59 @@
-.tix_tickets_table {
-  text-align: left;
-  font-size: 14px;
-  thead {
-    background-color: #fafafa ;
-  }
-  th {
-    font-weight: 600;    
-    padding: 10px 20px;
-  }
-  td {
-    padding: 10px 20px;
-  }
-}
-.tix-attendee-form {
-  input, select {
-    border: none;
-    border-radius: 3px;
-    padding: 4px 10px;
-    line-height: 1.7;
-    font-size: 16px;
-    box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.2);
-    background: #fafafa;
-    height: 35px;
-  }
-  label {
+#tix {
+  padding: 30px;
+  background-color: #fafafa;
+  border-radius: 3px;
+  .tix_tickets_table {
+    text-align: left;
     font-size: 14px;
-    font-weight: 500;
+    .tix-ticket-title {
+      color: #e9555c;
+      line-height: 3;
+    }
+    thead {
+      background-color: #D7F1BE;
+    }
+    th {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 10px 20px;
+    }
+    td {
+      padding: 10px 20px;
+    }
+  }
+  .tix-attendee-form {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 30px;
+    &:last-child {
+      border-bottom: 0px;
+      padding-bottom: 0px;
+    }
+    input,
+    select {
+      border: 1px solid #dfdfdf;
+      border-radius: 3px;
+      padding: 4px 10px;
+      line-height: 1.7;
+      font-size: 16px;
+      box-shadow: 0 0 5px -2px rgba(0, 0, 0, 0.2);
+      background: #f2f2f2;
+      height: 32px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      height: auto;
+      margin-right: 6px;
+    }
+    label {
+      
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .tix-checkout-button {
+    @include button (#e9555c, 'lg', #fff);
+  }
+  input[type="submit"] {
+    @include button (#e9555c, 'md', #fff);
   }
 }
