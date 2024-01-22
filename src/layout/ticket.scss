@@ -1,5 +1,6 @@
 #tix {
   padding: 30px;
+  padding-bottom: 90px;
   background-color: #fafafa;
   border-radius: 3px;
   .tix_tickets_table {
@@ -50,10 +51,10 @@
       font-weight: 500;
     }
   }
-  .tix-checkout-button {
-    @include button (#e9555c, 'lg', #fff);
-  }
   input[type="submit"] {
     @include button (#e9555c, 'md', #fff);
+  }
+  .tix-checkout-button {
+    @include button (#e9555c, 'lg', #fff);
   }
 }
